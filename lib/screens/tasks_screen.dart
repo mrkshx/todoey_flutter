@@ -54,22 +54,7 @@ class TasksScreen extends StatelessWidget {
           Expanded(
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
-              child: ListView(
-                children: [
-                  ListTile(
-                    title: Text('Buy avocados'),
-                    trailing: Checkbox(
-                      value: false,
-                    ),
-                  ),
-                  ListTile(
-                    title: Text('Buy eggplant'),
-                    trailing: Checkbox(
-                      value: false,
-                    ),
-                  ),
-                ],
-              ),
+              child: TasksList(),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -80,6 +65,31 @@ class TasksScreen extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class TasksList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        TaskTile(),
+        TaskTile(),
+        TaskTile(),
+      ],
+    );
+  }
+}
+
+class TaskTile extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text('Buy avocados'),
+      trailing: Checkbox(
+        value: false,
       ),
     );
   }

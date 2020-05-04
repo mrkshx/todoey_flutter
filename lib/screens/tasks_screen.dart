@@ -5,8 +5,16 @@ class TasksScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
-      body: Column(
-        children: [Icon(Icons.list), Text('Todoey')],
+      body: Container(
+        padding: EdgeInsets.only(
+          top: 60,
+          left: 30,
+          right: 30,
+          bottom: 30,
+        ),
+        child: Column(
+          children: [Icon(Icons.list), Text('Todoey')],
+        ),
       ),
     );
   }

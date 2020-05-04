@@ -20,6 +20,7 @@ class TasksScreen extends StatelessWidget {
               child: Icon(
                 Icons.list,
                 size: 30,
+                color: Colors.lightBlueAccent,
               ),
             ),
             Text('Todoey')

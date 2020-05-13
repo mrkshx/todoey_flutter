@@ -3,12 +3,7 @@ import 'task_tile.dart';
 import 'package:provider/provider.dart';
 import 'package:todoeyflutter/models/task_data.dart';
 
-class TasksList extends StatefulWidget {
-  @override
-  _TasksListState createState() => _TasksListState();
-}
-
-class _TasksListState extends State<TasksList> {
+class TasksList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(

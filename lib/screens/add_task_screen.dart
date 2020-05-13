@@ -48,8 +48,8 @@ class AddTaskScreen extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
-                // Nothing to do yet
                 addTaskCallback(newTaskTitle);
+                Navigator.pop(context);
               },
               child: Text(
                 'Add',

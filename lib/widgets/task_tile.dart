@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todoeyflutter/models/task_data.dart';
 
 class TaskTile extends StatelessWidget {
   final bool isChecked;
@@ -10,6 +12,9 @@ class TaskTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onLongPress: () {
+        Provider.of<TaskData>(context, listen: false).removeTask(taskTitle);
+      },
       title: Text(
         taskTitle,
         style: TextStyle(

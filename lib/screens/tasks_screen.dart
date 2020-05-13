@@ -4,14 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:todoeyflutter/models/task_data.dart';
 import 'package:todoeyflutter/widgets/tasks_list.dart';
 import 'add_task_screen.dart';
-import 'package:todoeyflutter/models/task.dart';
 
-class TasksScreen extends StatefulWidget {
-  @override
-  _TasksScreenState createState() => _TasksScreenState();
-}
-
-class _TasksScreenState extends State<TasksScreen> {
+class TasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,11 +23,11 @@ class _TasksScreenState extends State<TasksScreen> {
                       bottom: MediaQuery.of(context).viewInsets.bottom),
                   child: AddTaskScreen(
                     (newTaskTitle) {
-                      setState(() {
-                        tasks.add(
-                          Task(name: newTaskTitle),
-                        );
-                      });
+//                      setState(() {
+//                        tasks.add(
+//                          Task(name: newTaskTitle),
+//                        );
+//                      });
                     },
                   )),
             ),
